@@ -1,1 +1,68 @@
-.jumbotron h1{}
+/* ESERCIZIO 1) Crea un selettore per selezionare l'<h1> nella sezione "hero", ovvero nel jumbotron */
+.jumbotron h1{
+    color: pink;
+}
+
+
+/* ESERCIZIO 2) Crea un selettore per selezionare tutti i figli dell'elemento navbar */
+
+nav {
+    & > span,
+    & > a.btn,
+    & > a.btn-outline-secondary.disabled {
+        color: firebrick;
+    }
+}
+
+/* Oppure usando la pseudo-classe :is ma tra i due esempi sul tag a con scritto "Nuovi"
+verrebbe applicato il colore rosso perché è più specifico, perciò ho aggiunto tutte le classi di a con 
+scritto "Vecchi" per renderlo più specifico.  */
+
+nav :is( span, a.btn, a.btn.btn-outline-secondary.disabled ) {
+    color: pink;
+}
+
+
+
+/* ESERCIZIO 3) Crea un selettore per selezionare il link "Continua a leggere" del jumbotron */
+
+.jumbotron a{
+    color: pink;
+}
+
+
+/* ESERCIZIO 4) Crea un selettore per selezionare il primo blog post */
+
+.blog-post:first-of-type {
+    background-color: pink;
+}
+
+
+/* ESERCIZIO 5) Crea un selettore per selezionare l'<hr> del primo blog post e colorarlo di rosso */
+
+.blog-post:first-of-type hr{
+    border-top-color: red;
+}
+
+
+/* ESERCIZIO 6) Crea un selettore per selezionare i link pari della navbar */
+
+nav a.btn:nth-of-type(even){
+    background-color: black;
+}
+
+
+/* ESERCIZIO 7) Crea un selettore per selezionare tutti gli <li> della prima "ordered-list" della sidebar ("Archivio") */
+
+
+
+
+
+
+
+
+/*ESERCIZIO 8) Crea un selettore per selezionare l'autore del secondo blog post*/
+/*ESERCIZIO 9) Crea un selettore per selezionare il secondo <li> della lista del terzo blog post*/
+/*ESERCIZIO 10) Crea un selettore per selezionare il link "Torna su" che trovi a fondo pagina nell'angolo in basso a destra*/
+/*ESERCIZIO 11) Crea un selettore per selezionare il bottone "Nuovi" che trovi in basso*/
+/*ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer*/
