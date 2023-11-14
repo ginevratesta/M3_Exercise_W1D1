@@ -456,35 +456,43 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
       // EXTRA Crea con JavaScript la funzionalità per rimuovere il corrispondente elemento padre dal DOM cliccando sul link "Continua a leggere".
 
       const continueToRead1 = document.querySelector(".jumbotron a");
-      const continueToRead2 = document.querySelector(".col-md-6:nth-of-type(1) a.stretched-link")
-      const continueToRead3 = document.querySelector(".col-md-6:nth-of-type(2) a.stretched-link")
-     
-      function setDisplayNone(e) {
-        e.target.parentNode.parentNode.parentNode.style.display = "none";
-    }
+      const continueToRead2 = document.querySelector(
+        ".col-md-6:nth-of-type(1) a.stretched-link"
+      );
+      const continueToRead3 = document.querySelector(
+        ".col-md-6:nth-of-type(2) a.stretched-link"
+      );
 
-      continueToRead1.addEventListener("click", setDisplayNone);
-      continueToRead2.addEventListener("click", setDisplayNone);
-      continueToRead3.addEventListener("click", setDisplayNone);
+      function setContinueReading(e) {
+        e.target.parentNode.parentNode.parentNode.style.display = "none";
+      }
+
+      continueToRead1.addEventListener("click", setContinueReading);
+      continueToRead2.addEventListener("click", setContinueReading);
+      continueToRead3.addEventListener("click", setContinueReading);
 
       // EXTRA Crea con JavaScript la funzionalità per creare un alert col nome dell'autore ogni volta che il cursore passa sopra l'autore del post.
-      
-      const author1 = document.querySelector(".blog-post:nth-of-type(1) .blog-post-meta a");
-      const author2 = document.querySelector(".blog-post:nth-of-type(2) .blog-post-meta a")
-      const author3 = document.querySelector(".blog-post:nth-of-type(3) .blog-post-meta a")
 
-      function setAlert(e){
-        if(e.target){
-        return alert(`${e.target.innerText} is the author.`)
-        console.log(e.target);
+      const author1 = document.querySelector(
+        ".blog-post:nth-of-type(1) .blog-post-meta a"
+      );
+      const author2 = document.querySelector(
+        ".blog-post:nth-of-type(2) .blog-post-meta a"
+      );
+      const author3 = document.querySelector(
+        ".blog-post:nth-of-type(3) .blog-post-meta a"
+      );
+
+      function setAlert(e) {
+        if (e.target) {
+          return alert(`${e.target.innerText} is the author.`);
+          console.log(e.target);
         }
-    }
+      }
 
       author1.addEventListener("mouseover", setAlert);
       author2.addEventListener("mouseover", setAlert);
       author3.addEventListener("mouseover", setAlert);
-      
-
     </script>
   </body>
 </html>
