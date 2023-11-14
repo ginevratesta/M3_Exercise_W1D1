@@ -54,7 +54,7 @@ nav a.btn:nth-of-type(even){
 
 /* ESERCIZIO 7) Crea un selettore per selezionare tutti gli <li> della prima "ordered-list" della sidebar ("Archivio") */
 
-.p-4:nth-of-type(2) ol:nth-of-type(1) li {
+aside .p-4:nth-of-type(2) ol:nth-of-type(1) li {
 background-color: pink;
 }
 
@@ -73,9 +73,23 @@ background-color: pink;
 }
 
 
+/* ESERCIZIO 10) Crea un selettore per selezionare il link "Torna su" che trovi a fondo pagina nell'angolo in basso a destra */
+
+footer + a {
+    color: blueviolet;
+}
 
 
+/* ESERCIZIO 11) Crea un selettore per selezionare il bottone "Nuovi" che trovi in basso */
 
-/*ESERCIZIO 10) Crea un selettore per selezionare il link "Torna su" che trovi a fondo pagina nell'angolo in basso a destra*/
-/*ESERCIZIO 11) Crea un selettore per selezionare il bottone "Nuovi" che trovi in basso*/
-/*ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer*/
+.blog-pagination a:nth-of-type(2){
+    border: 10px solid pink;
+}
+
+
+/* ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer */
+
+footer a:nth-of-type(2){
+    color: blueviolet;
+}
+
