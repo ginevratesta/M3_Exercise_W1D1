@@ -6,22 +6,9 @@
 
 /* ESERCIZIO 2) Crea un selettore per selezionare tutti i figli dell'elemento navbar */
 
-nav {
-    & > span,
-    & > a.btn,
-    & > a.btn-outline-secondary.disabled {
-        color: firebrick;
-    }
-}
-
-/* Oppure usando la pseudo-classe :is ma tra i due esempi sul tag a con scritto "Nuovi"
-verrebbe applicato il colore rosso perché è più specifico, perciò ho aggiunto tutte le classi di a con 
-scritto "Vecchi" per renderlo più specifico.  */
-
-nav :is( span, a.btn, a.btn.btn-outline-secondary.disabled ) {
+nav:nth-child(n){
     color: pink;
 }
-
 
 
 /* ESERCIZIO 3) Crea un selettore per selezionare il link "Continua a leggere" del jumbotron */
