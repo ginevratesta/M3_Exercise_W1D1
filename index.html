@@ -455,14 +455,17 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
 
       // EXTRA Crea con JavaScript la funzionalità per rimuovere il corrispondente elemento padre dal DOM cliccando sul link "Continua a leggere".
 
-      const parent = document.querySelector(".jumbotron");
-      const continueToRead = document.querySelector(".jumbotron a");
+      const continueToRead1 = document.querySelector(".jumbotron a");
+      const continueToRead2 = document.querySelector(".col-md-6:nth-of-type(1) a.stretched-link")
+      const continueToRead3 = document.querySelector(".col-md-6:nth-of-type(2) a.stretched-link")
      
-      function setDisplayNone() {
-        parent.style.display = "none";
+      function setDisplayNone(e) {
+        e.target.parentNode.parentNode.parentNode.style.display = "none";
     }
 
-      continueToRead.addEventListener("click", setDisplayNone);
+      continueToRead1.addEventListener("click", setDisplayNone);
+      continueToRead2.addEventListener("click", setDisplayNone);
+      continueToRead3.addEventListener("click", setDisplayNone);
 
       // EXTRA Crea con JavaScript la funzionalità per creare un alert col nome dell'autore ogni volta che il cursore passa sopra l'autore del post.
       
