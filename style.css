@@ -1,82 +1,73 @@
 /* ESERCIZIO 1) Crea un selettore per selezionare l'<h1> nella sezione "hero", ovvero nel jumbotron */
-.jumbotron h1{
-    color: pink;
+.jumbotron h1 {
+  color: pink;
 }
-
 
 /* ESERCIZIO 2) Crea un selettore per selezionare tutti i figli dell'elemento navbar */
 
-nav:nth-child(n){
+nav {
+  &:nth-child(n) a.btn,
+  &:nth-child(n) span {
     color: pink;
+  }
 }
-
 
 /* ESERCIZIO 3) Crea un selettore per selezionare il link "Continua a leggere" del jumbotron */
 
-.jumbotron a{
-    color: pink;
+.jumbotron a {
+  color: pink;
 }
-
 
 /* ESERCIZIO 4) Crea un selettore per selezionare il primo blog post */
 
 .blog-post:first-of-type {
-    background-color: pink;
+  background-color: pink;
 }
-
 
 /* ESERCIZIO 5) Crea un selettore per selezionare l'<hr> del primo blog post e colorarlo di rosso */
 
-.blog-post:first-of-type hr{
-    border-top-color: red;
+.blog-post:first-of-type hr {
+  border-top-color: red;
 }
-
 
 /* ESERCIZIO 6) Crea un selettore per selezionare i link pari della navbar */
 
-nav a.btn:nth-of-type(even){
-    background-color: black;
+nav a.btn:nth-of-type(even) {
+  background-color: black;
 }
-
 
 /* ESERCIZIO 7) Crea un selettore per selezionare tutti gli <li> della prima "ordered-list" della sidebar ("Archivio") */
 
 aside .p-4:nth-of-type(2) ol:nth-of-type(1) li {
-background-color: pink;
+  background-color: pink;
 }
-
 
 /* ESERCIZIO 8) Crea un selettore per selezionare l'autore del secondo blog post */
 
-.blog-post:nth-of-type(2) .blog-post-meta a{
-    color: blueviolet;
+.blog-post:nth-of-type(2) .blog-post-meta a {
+  color: blueviolet;
 }
-
 
 /* ESERCIZIO 9) Crea un selettore per selezionare il secondo <li> della lista del terzo blog post */
 
-.blog-post:nth-of-type(3) li:nth-of-type(2){
-    background-color: pink;
+.blog-post:nth-of-type(3) li:nth-of-type(2) {
+  background-color: pink;
 }
-
 
 /* ESERCIZIO 10) Crea un selettore per selezionare il link "Torna su" che trovi a fondo pagina nell'angolo in basso a destra */
 
 footer + a {
-    color: blueviolet;
+  color: blueviolet;
 }
-
 
 /* ESERCIZIO 11) Crea un selettore per selezionare il bottone "Nuovi" che trovi in basso */
 
-.blog-pagination a:nth-of-type(2){
-    border: 10px solid pink;
+.blog-pagination a:nth-of-type(2) {
+  border: 10px solid pink;
 }
-
 
 /* ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer */
 
-footer a:nth-of-type(2){
-    color: blueviolet;
+footer a:nth-of-type(2) {
+  color: blueviolet;
 }
-
