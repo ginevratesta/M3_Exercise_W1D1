@@ -464,7 +464,8 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
       );
 
       function setContinueReading(e) {
-        e.target.parentNode.parentNode.parentNode.style.display = "none";
+        e.preventDefault();
+        e.target.closest(".col-md-6").style.display = "none";
       }
 
       continueToRead1.addEventListener("click", setContinueReading);
